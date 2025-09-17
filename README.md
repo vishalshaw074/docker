@@ -34,6 +34,11 @@ Build image from docker file
 Run the docker image and open bash from ubuntu 
 * docker run -it myubuntu bash
 
+Push the image to docker hub
+* docker login
+* docker tag myubuntu vishalshaw074/myubuntu:latest
+* docker push vishalshaw074/myubuntu:latest
+
 
 
 
