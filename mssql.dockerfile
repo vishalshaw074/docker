@@ -12,7 +12,7 @@ EXPOSE 1433
 CMD ["/opt/mssql/bin/sqlservr"]
 
 
-# docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Vishal@12345' \
+# docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=your_password' \
 #   -p 1433:1433 \
 #   -v mssql_vol:/var/opt/mssql \
 #   -d mymssql
