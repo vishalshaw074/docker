@@ -40,12 +40,12 @@ Push the image to docker hub
 * docker push vishalshaw074/myubuntu:latest
 
 ----------------------------------------------------------------------------------
-To persist your SQL Server database in Docker so it’s available the next time you run the container, you need to use Docker volumes. 
+1. To keep your SQL Server password secure and out of your Dockerfile,
+ create a .env file (do not commit it to version control):
 
-docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Vishal@12345' \
-  -p 1433:1433 \
-  -v mssql_vol:/var/opt/mssql \
-  -d mymssql
+2. To persist your SQL Server database in Docker so it’s available the next time you run the container, you need to use Docker volumes. 
+
+docker run --env-file .env -p 1433:1433 -v mssql_vol:/var/opt/mssql -d mymssql
 
 
 
