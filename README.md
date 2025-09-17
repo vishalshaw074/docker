@@ -29,7 +29,7 @@ Push your local commit to GitHub.
 * git push -u origin main
 
 Build image from docker file 
-* ocker build -f ubuntu.dockerfile -t myubuntu .
+* docker build -f ubuntu.dockerfile -t myubuntu .
 
 Run the docker image and open bash from ubuntu 
 * docker run -it myubuntu bash
@@ -39,8 +39,14 @@ Push the image to docker hub
 * docker tag myubuntu vishalshaw074/myubuntu:latest
 * docker push vishalshaw074/myubuntu:latest
 
+----------------------------------------------------------------------------------
+To persist your SQL Server database in Docker so it’s available the next time you run the container, you need to use Docker volumes. Here’s how:
+1: Use a Docker volume to store SQL Server data:
 
-
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Vishal@12345' \
+  -p 1433:1433 \
+  -v mssql_vol:/var/opt/mssql \
+  -d mymssql
 
 
 
