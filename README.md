@@ -40,8 +40,7 @@ Push the image to docker hub
 * docker push vishalshaw074/myubuntu:latest
 
 ----------------------------------------------------------------------------------
-To persist your SQL Server database in Docker so it’s available the next time you run the container, you need to use Docker volumes. Here’s how:
-1: Use a Docker volume to store SQL Server data:
+To persist your SQL Server database in Docker so it’s available the next time you run the container, you need to use Docker volumes. 
 
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Vishal@12345' \
   -p 1433:1433 \
