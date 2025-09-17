@@ -28,6 +28,12 @@ Add the remote to your local git repository.
 Push your local commit to GitHub. 
 * git push -u origin main
 
+Build image from docker file 
+* ocker build -f ubuntu.dockerfile -t myubuntu .
+
+Run the docker image and open bash from ubuntu 
+* docker run -it myubuntu bash
+
 
 
 
